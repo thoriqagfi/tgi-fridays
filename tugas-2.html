@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TGI Fridays Restaurant and Bar</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @font-face {
+      font-family: "Poppins", sans-serif;
+      src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    }
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color:black
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+      color: red;
+    }
+    nav {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      padding: 5px 0px 5px 0px;
+      justify-content: space-between;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      font-weight: bolder;
+      background-color: ghostwhite;
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 35px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      color: gray;
+    }
+    .navbar-right {
+      display: flex;
+      column-gap: 30px;
+      align-items: center;
+      margin-right: 20px;
+
+    }
+    .nav-link {
+      display: flex;
+      column-gap: 20px;
+    }
+    .button-nav {
+      background-color: rgba(255, 0, 0, 0.719);
+      color: white;
+      border: none;
+      padding: 10px 20px 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .button-nav:hover {
+      background-color: rgba(255, 0, 0, 0.507);
+    }
+    .button {
+      background-color: transparent;
+      color:black !important;
+      border: 2px rgba(255, 0, 0, 0.719) solid;
+      border-radius: 10px;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: rgba(255, 0, 0, 0.719);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        color: white !important;
+    }
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .icon {
+      display: flex;
+    }
+    #hero {
+      background-color: ghostwhite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 100px
+    }
+    .hero-img {
+      width: 100vh;
+    }
+    #about {
+      background-color: ghostwhite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 100px
+    }
+    .achievements {
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+    .ach {
+      box-shadow: inset 0 0 0 0 rgba(255, 0, 0, 0.719);
+      padding:  30px 60px 30px 60px;
+      color:rgba(255, 0, 0, 0.719);
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      border-radius: 200px;
+    }
+    .ach:hover {
+      box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.336);
+      color: white;
+    }
+    .ach-number {
+      font-size: 25px;
+      font-weight: bolder;
+      color: rgba(255, 0, 0, 0.719);
+    }
+    #items {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    .card-col {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: white;
+    }
+    .card {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      margin: 20px 20px 20px 20px;
+      padding-bottom: 10px;
+      width: 350px;
+      min-height: 600px;
+      max-height: 600px;
+      background-color: white;
+    }
+    .card-img {
+      height: 350px;
+      min-width: 350px;
+      max-width: 350px;
+      border-radius: 10px 10px 0px 0;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: bold;
+      color: black
+    }
+    .card-desc {
+      font-size: small;
+      text-align: justify;
+      width: 250px;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+    .testimonials {
+      background-color: ghostwhite;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+    footer {
+      background-color: black;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+      text-align: justify;
+      padding: 20px 0px 20px 0px;
+    }
+    .foo-p {
+      font-size: small;
+      font-weight: bold;
+    }
+    .socmed {
+      display: flex;
+      justify-content: space-evenly;
+      align-content: flex-start;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <nav class="">
+      <p style="font-weight: bold; color: black; margin-left: 20px;">TGI Fridays</p>
+      <div class="navbar-right">
+        <div class="nav-link">
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="navbar-right">
+          <a href="#" class="icon"><img src="/image/nav-search.png" alt=""></a>
+          <a href="#" class="icon"><img src="/image/nav-shop.png" alt=""></a>
+          <button class="button-nav">SIGN IN</button>
+        </div>
+      </div>
+    </nav>
+
+  <section id="hero" class="">
+    <div class="container">
+      <div class="hero-text">
+        <div class="col-6">
+          <h1>Enjoy Delicious Food <br> at Popular Prices</h1>
+          <p style="margin-bottom: 30px;">
+            get a variety of foods full of flavor at affordable prices
+          </p>
+          <a href="#items"><button class="button btn btn-animated">Explore Now!</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <img src="/image/hero-pizza.png" alt="" class="hero-img">
+    </div>
+  </section>
+  <section class="achievements">
+    <div class="ach">
+      <p class="ach-number">1236+</p>
+      <p class="ach-p">Food</p>
+    </div>
+    <div class="ach">
+      <p class="ach-number">5437+</p>
+      <p class="ach-p">Delivery</p>
+    </div>
+    <div class="ach">
+      <p class="ach-number">6091+</p>
+      <p class="ach-p">Customer</p>
+    </div>
+  </section>
+  <section id="about" class="">
+    <div class="col-6">
+      <img src="/image/about-us.jpeg" alt="" class="hero-img">
+    </div>
+    <div class="container">
+      <div class="hero-text">
+        <div class="col-6">
+          <h1>Simple Way of <br> Eating Delicious</h1>
+          <p style="margin-bottom: 30px;">
+            You can try several types of this simple dish. You <br>
+            also easily apply it, especially for those of you <br>
+            who are beginners
+          </p>
+          <a href="#about"><button class="button btn btn-animated">Explore Our Story!</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="items" class="items">
+    <div>
+      <h2>Most Popular Items</h2>
+      <p>there are various food menus that are sold well by the customers</p>
+    </div>
+    <div class="card-col">
+      <div class="card">
+        <img src="/image/chicken-burger.jpg" alt="" class="card-img">
+        <div class="card-body">
+          <p class="card-title">Chicken Burger</p>
+          <p class="card-desc">A sandwich consisting of a patty made from ground chicken, served in a bun, typically hot and often with other ingredients. The chicken patty used in such a sandwich.</p>
+          <button class="button btn btn-animated">Order</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/image/pizza.jpg" alt="" class="card-img">
+        <div class="card-body">
+          <p class="card-title">Pizza</p>
+          <p class="card-desc">Dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients.</p>
+          <button class="button btn btn-animated">Order</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/image/spaghetti.jpg" alt="" class="card-img">
+        <div class="card-body">
+          <p class="card-title">Spaghetti</p>
+          <p class="card-desc">A staple food of traditional Italian cuisine. Like other pasta, spaghetti is made of milled wheat, water, and sometimes enriched with vitamins and minerals.</p>
+          <button class="button btn btn-animated">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div>
+      <h2>TGI FRIDAYS</h2>
+      <p class="foo-p">Jalan Senopati Raya No 13A</p>
+    </div>
+    <div>
+      <h4>Open Hours</h4>
+      <p class="foo-p">Mon-Thu : 9 AM - 6 PM</p>
+      <p class="foo-p">Friday : Closed</p>
+      <p class="foo-p">Sat-Sun : 9 AM - 4 PM</p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p class="foo-p">Phone : 021-12345678</p>
+      <p class="foo-p">Email : tgi.fridays@tgif.com</p>
+    </div>
+    <div>
+      <h4>Follow our social media</h4>
+      <p class="foo-p">Instagram : @tgi.fridays</p>
+      <p class="foo-p">Twitter : @tgi.fridays</p>
+      <p class="foo-p">Facebook : TGI Fridays</p>
+    </div>
+  </footer>
+</body>
+</html>
