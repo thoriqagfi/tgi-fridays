@@ -11,10 +11,13 @@
       font-family: "Poppins", sans-serif;
       src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      color:black
+      color:black;
     }
     a {
       text-decoration: none;
@@ -220,9 +223,9 @@
       <div class="navbar-right">
         <div class="nav-link">
           <a href="#">Home</a>
-          <a href="#">Menu</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#about">About</a>
+          <a href="#items">Menu</a>
+          <a href="#footer">Contact</a>
         </div>
         <div class="navbar-right">
           <a href="#" class="icon"><img src="/image/nav-search.png" alt=""></a>
@@ -312,7 +315,7 @@
       </div>
     </div>
   </section>
-  <footer>
+  <footer id="footer">
     <div>
       <h2>TGI FRIDAYS</h2>
       <p class="foo-p">Jalan Senopati Raya No 13A</p>
